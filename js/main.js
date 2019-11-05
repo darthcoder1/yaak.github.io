@@ -6,7 +6,7 @@
 (function($) {
 
     "use strict";
-    
+
     var cfg = {
         scrollDuration : 800, // smoothscroll duration
         mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'   // mailchimp url
@@ -21,28 +21,28 @@
 
     // svg fallback
     if (!Modernizr.svg) {
-        $(".home-logo img").attr("src", "images/logo.png");
+        $(".home-logo img").attr("src", "images/yaak-logo.png");
     }
 
 
    /* Preloader
     * -------------------------------------------------- */
     var ssPreloader = function() {
-        
+
         $("html").addClass('ss-preload');
 
         $WIN.on('load', function() {
 
-            // will first fade out the loading animation 
+            // will first fade out the loading animation
             $("#loader").fadeOut("slow", function() {
                 // will fade out the whole DIV that covers the website.
                 $("#preloader").delay(300).fadeOut("slow");
-            }); 
-            
-            // for hero content animations 
+            });
+
+            // for hero content animations
             $("html").removeClass('ss-preload');
             $("html").addClass('ss-loaded');
-        
+
         });
     };
 
@@ -65,7 +65,7 @@
    /* slick slider
     * ------------------------------------------------------ */
     var ssSlickSlider = function() {
-        
+
         $('.home-slider').slick({
             arrows: false,
             dots: false,
@@ -95,7 +95,7 @@
         .on('update.countdown finish.countdown', function(event) {
 
             var str = '<div class=\"top\"><div class=\"time days\">' +
-                      '%D <span>day%!D</span>' + 
+                      '%D <span>day%!D</span>' +
                       '</div></div>' +
                       '<div class=\"time hours\">' +
                       '%H <span>H</span></div>' +
@@ -114,7 +114,7 @@
    /* AjaxChimp
     * ------------------------------------------------------ */
     var ssAjaxChimp = function() {
-        
+
         $('#mc-form').ajaxChimp({
             language: 'es',
             url: cfg.mailChimpURL
@@ -146,7 +146,7 @@
    /* initialize
     * ------------------------------------------------------ */
     (function ssInit() {
-        
+
         ssPreloader();
         ssInfoToggle();
         ssSlickSlider();
