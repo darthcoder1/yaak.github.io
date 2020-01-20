@@ -80,6 +80,10 @@
       width: 100%;
     }
 
+    body {
+      position: fixed;
+    }
+
     h1 {
       font-size: 60px;
       font-weight: 700;
@@ -125,6 +129,20 @@
       min-height: 100%;
       max-width: 988px;
       position: relative;
+    }
+
+    @media only screen and (max-width: 600px) {
+      h1 {
+        font-size: 45px;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+
+      p {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
